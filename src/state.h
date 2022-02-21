@@ -1,14 +1,11 @@
 //
 // Created by Mathieu Saugier on 14/02/2022.
 //
-
-#ifndef LEXER_STATE_H
-#define LEXER_STATE_H
+#pragma once
 #include <iostream>
 #include "lexer.h"
-
+#include "automate.h"
 using namespace std;
-
 class Automate;
 class State
 {
@@ -17,8 +14,9 @@ public:
     virtual bool transitionToState(Automate* a, Symbole* symbole);
     int getValeur(){return valeur;}
     void setValeur(int newValeur){valeur = newValeur;}
+    ~State();
 protected:
-    int valeur = 0;
+    int valeur;
 };
 
 class State0: public State{
@@ -81,7 +79,3 @@ public:
     State9();
     bool transitionToState(Automate* a, Symbole* symbole);
 };
-
-
-
-#endif //LEXER_STATE_H

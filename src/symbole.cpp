@@ -10,3 +10,22 @@ void Entier::Affiche() {
    cout<<"("<<valeur<<")";
 }
 
+void Plus::Affiche(){
+  Symbole::Affiche();
+}
+void OpenPar::Affiche(){
+  Symbole::Affiche();
+}
+void ClosePar::Affiche(){
+  Symbole::Affiche();
+}
+void Mult::Affiche(){
+  Symbole::Affiche();
+}
+void Expr::Affiche(){
+  Symbole::Affiche();
+}
+void Fin::Affiche() {
+  Symbole::Affiche();
+}
+

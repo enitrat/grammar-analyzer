@@ -10,4 +10,4 @@ add_executable(Lexer
         lexer.h
         main.cpp
         symbole.cpp
-        symbole.h State.h Axiome.cpp Automate.cpp Automate.h State.cpp)
+        symbole.h state.h automate.cpp automate.h state.cpp)
