@@ -23,47 +23,49 @@ Automate::~Automate() {}
 bool Automate::run() {
   bool nextState = true;
   while (nextState) {
-    Symbole* curSymbol = _lexer->Consulter();
+    Symbole *curSymbol = _lexer->Consulter();
     // cout<<endl;
     _lexer->Avancer();
-    curSymbol->Affiche();
     nextState = _statesStack.top()->transitionToState(this, curSymbol);
   }
 
-  if (*_symboleStack.top() == FIN) {
-    return true;
+  if (*_symboleStack.top() != ERREUR) {
+    int resultat = _symboleStack.top()->getValeur();
+    cout << "Syntaxe correct" << endl << "Résultat : " << resultat << endl;
   } else {
-    return false;
+    cout << "Syntaxe non reconnu : caractere invalide" << endl;
   }
 }
 
 void Automate::decalage(State *state, Symbole *symbole) {
-  cout<<"decalage"<<endl;
+  cout << "decalage" << endl;
   _statesStack.push(state);
   _symboleStack.push(symbole);
 }
 void Automate::reduction(int i, Symbole *symbole) {
 
-  cout<<"reduction"<<endl;
+  cout << "reduction" << endl;
   symbole->Affiche();
+  cout << endl;
   stack<Symbole *> tempSymbolStack;
   for (int j = 0; j < i; j++) {
     delete (_statesStack.top());
     // cout<<"reduc"<<endl;
     _statesStack.pop();
     tempSymbolStack.push(_symboleStack.top());
+    _symboleStack.top()->Affiche();
+    cout << "-";
     _symboleStack.pop();
   }
+  cout << endl;
 
   int valeur;
 
   if (i == 1) {
     valeur = tempSymbolStack.top()->getValeur();
   } else if (i == 3) {
-
-    tempSymbolStack.pop();
     tempSymbolStack.top()->Affiche();
-
+    cout << endl;
     if (*tempSymbolStack.top() == OPENPAR) {
       tempSymbolStack.pop();
       valeur = tempSymbolStack.top()->getValeur();
@@ -75,15 +77,15 @@ void Automate::reduction(int i, Symbole *symbole) {
         int e2 = tempSymbolStack.top()->getValeur();
         valeur = e1 * e2;
       } else {
-        cout<<"hehe"<<endl;
-        cout<<e1<<endl;
+        cout << "hehe" << endl;
+        cout << e1 << endl;
         tempSymbolStack.pop();
         int e2 = tempSymbolStack.top()->getValeur();
         valeur = e1 + e2;
       }
     }
   }
-  //cout<<_statesStack.size()<<endl;
+  // cout<<_statesStack.size()<<endl;
   _statesStack.top()->transitionToState(this, new Expr(valeur));
   _lexer->addSymbol(symbole);
 }

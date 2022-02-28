@@ -30,6 +30,7 @@ bool State0::transitionToState(Automate *a, Symbole *symbole) {
     break;
   case EXPR:
     a->decalage(new State1(), symbole);
+    break;
   default:
     delete (symbole);
     a->decalage(nullptr, new Symbole(ERREUR));
