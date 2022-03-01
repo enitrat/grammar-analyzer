@@ -90,11 +90,10 @@ bool State3::transitionToState(Automate *a, Symbole *symbole) {
     a->reduction(1, new Mult());
     break;
   case CLOSEPAR:
-    cout << "red closepar" << endl;
     a->reduction(1, new ClosePar());
     break;
   case FIN:
-    a->reduction(1, new Fin);
+    a->reduction(1, new Fin());
     break;
   }
   return true;
@@ -167,10 +166,10 @@ bool State7::transitionToState(Automate *a, Symbole *symbole) {
   cout << "State7" << endl;
   switch (*symbole) {
   case MULT:
-    a->decalage(new State5(), symbole);
+    a->decalage(new State5(), new Mult());
     break;
   case PLUS:
-    a->decalage(new State4(), symbole);
+    a->reduction(3, new Plus());
     break;
   case FIN:
     a->reduction(3, new Fin());
@@ -191,13 +190,16 @@ bool State8::transitionToState(Automate *a, Symbole *symbole) {
 
   switch (*symbole) {
   case MULT:
-    a->decalage(new State5(), symbole);
+    a->reduction(3, new Mult());
     break;
   case PLUS:
-    a->decalage(new State4(), symbole);
+    a->reduction(3, new Plus());
+    break;
+  case CLOSEPAR:
+    a->reduction(3, new ClosePar());
     break;
   case FIN:
-    a->reduction(3, new Fin);
+    a->reduction(3, new Fin());
     break;
   default:
     delete (symbole);

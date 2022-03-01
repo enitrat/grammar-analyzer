@@ -4,7 +4,8 @@
 
 int main(void) {
 
-  string chaine("(1+34)*123");
+  //string chaine("(1+34)*123");
+  string chaine("1+(8*4)*2+8");
   Automate *a = new Automate(chaine);
   a->run();
 //  Symbole *s;

@@ -46,12 +46,5 @@ Symbole *Lexer::Consulter() {
 void Lexer::Avancer() { tampon = nullptr; }
 
 void Lexer::addSymbol(Symbole *symbole) {
-  switch (*symbole) {
-  case PLUS:
-  case MULT:
-  case OPENPAR:
-  case CLOSEPAR:
     tampon = symbole;
-    break;
-  }
 }
