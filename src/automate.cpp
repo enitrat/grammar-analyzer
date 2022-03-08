@@ -44,10 +44,10 @@ bool Automate::run() {
 
   if (*_symboleStack.top() != ERREUR) {
     int resultat = _symboleStack.top()->getValeur();
-    cout << "Syntaxe correct" << endl << "Résultat : " << resultat << endl;
+    cout << "L'expression rentrée est correcte" << endl << "Résultat : " << resultat << endl;
     return true;
   } else {
-    cout << "Syntaxe non reconnu : caractere invalide" << endl;
+    cout << "L'expression rentrée est invalide" << endl;
     return false;
   }
 }
@@ -56,10 +56,8 @@ void Automate::decalage(State *state, Symbole *symbole) {
 
   _statesStack.push(state);
   _symboleStack.push(symbole);
-  _symboleStack.top()->Affiche();
 
   if (symbole->isTerminal()) {
-    cout<<"javance"<<endl;
     _lexer->Avancer();
   }
 }

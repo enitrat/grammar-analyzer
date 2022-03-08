@@ -75,35 +75,35 @@ build cmake_object_order_depends_target_Lexer: phony || CMakeFiles/Lexer.dir
 build CMakeFiles/Lexer.dir/lexer.cpp.o: CXX_COMPILER__Lexer_Debug /Users/msaug/Documents/4IF/GL/Lexer/src/lexer.cpp || cmake_object_order_depends_target_Lexer
   DEP_FILE = CMakeFiles/Lexer.dir/lexer.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -std=gnu++14
-  INCLUDES = -I/Users/msaug/Documents/4IF/GL/Lexer/src/..
+  INCLUDES = -I/Users/msaug/Documents/4IF/GL/Lexer/src/src
   OBJECT_DIR = CMakeFiles/Lexer.dir
   OBJECT_FILE_DIR = CMakeFiles/Lexer.dir
 
 build CMakeFiles/Lexer.dir/main.cpp.o: CXX_COMPILER__Lexer_Debug /Users/msaug/Documents/4IF/GL/Lexer/src/main.cpp || cmake_object_order_depends_target_Lexer
   DEP_FILE = CMakeFiles/Lexer.dir/main.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -std=gnu++14
-  INCLUDES = -I/Users/msaug/Documents/4IF/GL/Lexer/src/..
+  INCLUDES = -I/Users/msaug/Documents/4IF/GL/Lexer/src/src
   OBJECT_DIR = CMakeFiles/Lexer.dir
   OBJECT_FILE_DIR = CMakeFiles/Lexer.dir
 
 build CMakeFiles/Lexer.dir/symbole.cpp.o: CXX_COMPILER__Lexer_Debug /Users/msaug/Documents/4IF/GL/Lexer/src/symbole.cpp || cmake_object_order_depends_target_Lexer
   DEP_FILE = CMakeFiles/Lexer.dir/symbole.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -std=gnu++14
-  INCLUDES = -I/Users/msaug/Documents/4IF/GL/Lexer/src/..
+  INCLUDES = -I/Users/msaug/Documents/4IF/GL/Lexer/src/src
   OBJECT_DIR = CMakeFiles/Lexer.dir
   OBJECT_FILE_DIR = CMakeFiles/Lexer.dir
 
 build CMakeFiles/Lexer.dir/automate.cpp.o: CXX_COMPILER__Lexer_Debug /Users/msaug/Documents/4IF/GL/Lexer/src/automate.cpp || cmake_object_order_depends_target_Lexer
   DEP_FILE = CMakeFiles/Lexer.dir/automate.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -std=gnu++14
-  INCLUDES = -I/Users/msaug/Documents/4IF/GL/Lexer/src/..
+  INCLUDES = -I/Users/msaug/Documents/4IF/GL/Lexer/src/src
   OBJECT_DIR = CMakeFiles/Lexer.dir
   OBJECT_FILE_DIR = CMakeFiles/Lexer.dir
 
 build CMakeFiles/Lexer.dir/state.cpp.o: CXX_COMPILER__Lexer_Debug /Users/msaug/Documents/4IF/GL/Lexer/src/state.cpp || cmake_object_order_depends_target_Lexer
   DEP_FILE = CMakeFiles/Lexer.dir/state.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -std=gnu++14
-  INCLUDES = -I/Users/msaug/Documents/4IF/GL/Lexer/src/..
+  INCLUDES = -I/Users/msaug/Documents/4IF/GL/Lexer/src/src
   OBJECT_DIR = CMakeFiles/Lexer.dir
   OBJECT_FILE_DIR = CMakeFiles/Lexer.dir
 

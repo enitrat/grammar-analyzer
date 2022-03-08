@@ -4,17 +4,19 @@
 
 int main(void) {
 
-  //string chaine("(1+34)*123");
-  string chaine("1+(8*4)*2+8");
-  Automate *a = new Automate(chaine);
-  a->run();
-//  Symbole *s;
-//  cout << *s << endl;
-//  while (*(s = l.Consulter()) != FIN) {
-//    s->Affiche();
-//    cout << *s << endl;
-//    cout << endl;
-//    l.Avancer();
-//  }
+  string in;
+  while(true) {
+    cout << "Entrez l'expression à calculer ou 'exit' pour quitter le programme "
+         << endl;
+    getline(cin, in);
+    if (in == "exit") {
+      cout << "Au revoir !" << endl;
+      break;
+    }
+
+    Automate *a = new Automate(in);
+    a->run();
+    delete (a);
+  }
   return 0;
 }

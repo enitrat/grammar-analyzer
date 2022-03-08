@@ -20,7 +20,6 @@ State8::State8() : State() {}
 State9::State9() : State() {}
 
 bool State0::transitionToState(Automate *a, Symbole *symbole) {
-  cout << "State0" << endl;
   switch (*symbole) {
   case OPENPAR:
     a->decalage(new State2(), symbole);
@@ -40,7 +39,6 @@ bool State0::transitionToState(Automate *a, Symbole *symbole) {
 }
 
 bool State1::transitionToState(Automate *a, Symbole *symbole) {
-  cout << "State1" << endl;
   switch (*symbole) {
   case PLUS:
     a->decalage(new State4(), symbole);
@@ -60,7 +58,6 @@ bool State1::transitionToState(Automate *a, Symbole *symbole) {
 }
 
 bool State2::transitionToState(Automate *a, Symbole *symbole) {
-  cout << "State2" << endl;
   switch (*symbole) {
   case OPENPAR:
     a->decalage(new State2(), symbole);
@@ -72,7 +69,6 @@ bool State2::transitionToState(Automate *a, Symbole *symbole) {
     a->decalage(new State6(), symbole);
     break;
   default:
-    cout << "default" << endl;
     delete (symbole);
     a->decalage(nullptr, new Symbole(ERREUR));
     return false;
@@ -81,7 +77,6 @@ bool State2::transitionToState(Automate *a, Symbole *symbole) {
 }
 
 bool State3::transitionToState(Automate *a, Symbole *symbole) {
-  cout << "state3" << endl;
   switch (*symbole) {
   case PLUS:
     a->reduction(1, new Plus());
@@ -100,8 +95,6 @@ bool State3::transitionToState(Automate *a, Symbole *symbole) {
 }
 
 bool State4::transitionToState(Automate *a, Symbole *symbole) {
-  cout << "State4" << endl;
-  symbole->Affiche();
   switch (*symbole) {
   case OPENPAR:
     a->decalage(new State2(), symbole);
@@ -121,7 +114,6 @@ bool State4::transitionToState(Automate *a, Symbole *symbole) {
 }
 
 bool State5::transitionToState(Automate *a, Symbole *symbole) {
-  cout << "State5" << endl;
 
   switch (*symbole) {
   case OPENPAR:
@@ -142,8 +134,6 @@ bool State5::transitionToState(Automate *a, Symbole *symbole) {
 }
 
 bool State6::transitionToState(Automate *a, Symbole *symbole) {
-  cout << "State6" << endl;
-  symbole->Affiche();
   switch (*symbole) {
   case PLUS:
     a->decalage(new State4(), symbole);
@@ -163,7 +153,6 @@ bool State6::transitionToState(Automate *a, Symbole *symbole) {
 }
 
 bool State7::transitionToState(Automate *a, Symbole *symbole) {
-  cout << "State7" << endl;
   switch (*symbole) {
   case MULT:
     a->decalage(new State5(), new Mult());
@@ -186,7 +175,6 @@ bool State7::transitionToState(Automate *a, Symbole *symbole) {
 }
 
 bool State8::transitionToState(Automate *a, Symbole *symbole) {
-  cout << "State8" << endl;
 
   switch (*symbole) {
   case MULT:
@@ -210,7 +198,6 @@ bool State8::transitionToState(Automate *a, Symbole *symbole) {
 }
 
 bool State9::transitionToState(Automate *a, Symbole *symbole) {
-  cout << "State9" << endl;
 
   switch (*symbole) {
   case PLUS:
