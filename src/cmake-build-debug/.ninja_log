@@ -1,0 +1,10 @@
+# ninja log v5
+1	208	1646145160497030837	CMakeFiles/Lexer.dir/main.cpp.o	c907cb091fb4f7a2
+1	309	1646144280870382209	CMakeFiles/Lexer.dir/lexer.cpp.o	6c971f56c577e679
+2	303	1645462264472237686	CMakeFiles/Lexer.dir/symbole.cpp.o	cc3be5e4ec012643
+1	298	1645455543299570995	CMakeFiles/Lexer.dir/Automate.cpp.o	82fae01bea067e2a
+223	250	1646146110066093303	Lexer	fdb5b8bfba1d8f9e
+0	48	1646734527617849973	build.ninja	d666e7fa2e485e7c
+1	229	1645455543231756451	CMakeFiles/Lexer.dir/State.cpp.o	df7614e05893fbe8
+1	223	1646146110037060048	CMakeFiles/Lexer.dir/state.cpp.o	469ca32844a4dc98
+1	331	1646145733055611828	CMakeFiles/Lexer.dir/automate.cpp.o	fc2c7af834e4a656
